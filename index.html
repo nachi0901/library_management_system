@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Library</title>
+
+<style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+  
+
+}
+
+.user_login{
+    position: relative;
+    left: 387px;
+    height: 41px;
+    width: 236px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #641818;
+}
+#welcome :hover {
+    background-color: #ec1414;
+}
+.login{
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+}
+
+#add_books{
+    position: absolute;
+    top: 60px;
+    left:512px;
+    //display: none;
+    height: 400px;
+    width: 588px;
+    background-color: rgb(199, 229, 247);
+}
+
+#Hbooks{
+    position: absolute;
+    left: 155px;
+    border-bottom: 2px solid black;
+    height: 27px;
+    width: 130px;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.booksid{
+    position: relative;
+    top:50px;
+    left:225px;
+    display:block;
+    width:262px;
+    margin:-28px 0px -28px 35px;
+    height: 30px;
+   
+}
+.tital{
+    position:relative;
+    top:67px;
+    left:61px;
+    display:block;
+    margin:15px 15px 15px 35px;
+}
+
+.button_add{
+    position: absolute;
+    top: 356px;
+    left: 350px;
+}
+
+.add_book{
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#Book_search{
+    position: absolute;
+    top: 60px;
+    left:512px;
+    display: none;
+    height: 400px;
+    width: 588px;
+    background-color: rgb(199, 229, 247);
+
+}
+
+#sbooks{
+    position: absolute;
+    left: 155px;
+    border-bottom: 2px solid black;
+    height: 27px;
+    width: 156px;
+    font-size: 28px;
+    margin-top: 20px;
+
+}
+
+.books_search_id{
+    position: relative;
+    top:50px;
+    left:158px;
+    display:block;
+    width:262px;
+    margin:-28px 0px -28px 35px;
+    height: 30px;
+}
+
+.button_search{
+    position: absolute;
+    top: 150px;
+    left: 230px;
+  
+}
+#book_table{
+    position: absolute;
+    top: 203px;
+    left: 45px;
+    border: 2px solid black;
+}
+
+td{
+    text-align:center;
+}
+
+#track_record{
+    position: absolute;
+    top: 60px;
+    left:512px;
+    display: none;
+    height: 400px;
+    width: 588px;
+    background-color: rgb(199, 229, 247);
+
+}
+
+#track{
+    position: absolute;
+    left: 155px;
+    border-bottom: 2px solid black;
+    height: 27px;
+    width: 156px;
+    font-size: 28px;
+    margin-top: 20px;
+
+}
+#tital{
+    position:relative;
+    top:67px;
+    left:0px;
+    display:block;
+    margin:15px 15px 15px 35px;
+
+}
+#track_button_search{
+    position: absolute;
+    top: 2500px;
+    left: 230px;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="welcome">
+
+    <button class="user_login"  id="okButton"><a href="#" class="login"  onclick="add_bookfun()">Add Books</a></button>
+    <button class="user_login" id="searchButton"><a href="#" class="login" onclick="book_searchfun()">Books Search</a></button>
+    <button class="user_login" id="searchButton"><a href="#" class="login" onclick="track_record()">Track Record</a></button>
+    <button class="user_login"><a href="#" class="login">Logout</a></button>
+</div>
+
+<div id="add_books">
+       <label id="Hbooks">Add Books</label>
+   <form action="">
+       <h2 class="tital">Book id</h2>
+       <input type="number" class="booksid"><br>
+       <h2 class="tital">Title</h2>
+       <input type="text" class="booksid"><br>
+       <h2 class="tital">Author Name</h2>
+       <input type="text" class="booksid"><br>
+       <h2 class="tital">Cost</h2>
+       <input type="text" class="booksid"><br>
+       <h2 class="tital">Quantity</h2>
+       <input type="text" class="booksid"><br>
+
+       <button class="button_add" onclick="fun()">Add</button>
+
+    </form>
+</div>
+
+<div id="Book_search">
+    <label id="sbooks">Book Search</label>
+<form action="">
+    <h2 class="tital">Book id</h2>
+    <input type="number" class="books_search_id"><br>
+   
+    <button class="button_search">Search</button>
+
+ </form>
+
+ <table id="book_table" border="1"height="auto"width="500" cellpadding="0"cellspacing="0">
+     <tr>
+         <th>Book Id</th>
+         <th>Title</th>
+         <th>Author Name</th>
+         <th>Cost</th>
+         <th>quantity</th>
+     </tr>
+     <tr>
+         <td>101</td>
+         <td>math</td>
+         <td>Krushna Ranzane</td>
+         <td>450</td>
+         <td>1</td>
+    
+     </tr>
+ </table>
+</div>
+
+
+<div id="track_record">
+     <label id="track">Track Record</label>
+  <form action="">
+    <h2 id="tital">Student Name</h2>
+    <input type="text" class="books_search_id"><br>
+
+    <h2 id="tital">Book Name</h2>
+    <input type="text" class="books_search_id"><br>
+
+    <h2 id="tital">Issue Date</h2>
+    <input type="text" class="books_search_id"><br>
+   
+   
+   
+    <button id="track_button_search">Save</button>
+
+ </form>
+
+</div>
+
+
+<script>
+
+
+function add_bookfun(){
+    document.getElementById("add_books").style.display="inline-block";
+    document.getElementById("Book_search").style.display="none";
+    document.getElementById("track_record").style.display="none";
+
+}
+
+function book_searchfun(){
+    document.getElementById("add_books").style.display="none";
+    document.getElementById("Book_search").style.display="inline-block";
+    document.getElementById("track_record").style.display="none";
+}
+   
+function fun(){
+document.getElementsByClassName("button_add").value;
+ alert("Book Added Successfully");
+}
+
+function track_record(){
+    document.getElementById("add_books").style.display="none";
+    document.getElementById("add_books").style.display="none";
+    document.getElementById("track_record").style.display="inline-block";
+    
+}
+
+</script>
+</body>
+</html>
